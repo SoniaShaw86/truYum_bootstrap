@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title></title>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark" style="background-color: #003399;">
+        <!-- Navbar content -->
+        <a class="navbar-brand" href="#">
+            <img src="cognizant.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+            truYum
+          </a>
+          <ol class="nav">
+            <li class="nav-item">
+                <a class="nav-link" href="menu-item-list-admin.html"><p class="text-right  text-white"><ins>Menu</ins></p></a>
+            </li>
+          </ol>
+    </nav>
+    <h1 class="p-5">Edit Menu Item</h1>
+    <form class="needs-validation" novalidate>
+  
+  
+  
+    <label for="name"><p class="font-weight-bold">Name</p></label>
+    <input type="text" class="form-control is-invalid" id="name" required>
+    <div class="invalid-feedback">
+      Please enter name.
+    </div>
+ 
+  <table class="table table-borderless">
+    <thead>
+    <tr>
+      <td><p class="font-weight-bold">Price(Rs.)</p></td>
+      <td><p class="font-weight-bold">Active</p></td>
+      <td><p class="font-weight-bold">Date of Launch</p></td>
+      <td><p class="font-weight-bold">Category</p></td>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+      <td><input type="number"id="price" class="form-control is-invalid" required><div class="invalid-feedback">
+        Please enter a value.
+      </div></td>
+      <td><div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" id="activeYes" value="option1" checked>
+            <label class="form-check-label" for="activeYes">
+            Yes
+            </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" id="activeNo" value="option2">
+            <label class="form-check-label" for="activeNo">
+              No
+            </label>
+          </div></td>
+         <td><input type="date" class="form-control is-invalid" name="dol" id="dol" required><div class="invalid-feedback">
+           Please enter date.
+          </div>
+        </td>
+        <td>
+        <select class="custom-select" required>
+          <option selected>Open this select menu</option>
+          <option value="1">Starters</option>
+          <option value="2">Main Course</option>
+          <option value="3">Dessert</option>
+          <option value="4">Drinks</option>
+        </select>
+      </td>
+  </tr>
+  <tr>
+  <td> <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" id="freedelivery" checked>Free Delivery</td>
+    
+  </div>
+  </tr>
+  <tr><td><button class="btn btn-primary btn-lg" type="submit" role="button">Save</button></td></tr>
+</tbody>
+</table>
+</form>
+ 
+    <div class="fixed-bottom">
+      <footer class="page-footer font-small unique-color-dark" style="background-color: #b3b3b3;">
+        <div class="footer-copyright text-left py-3">Copyright © 2020<div id="year"></div>
+        </div>  
+      </footer>
+    </div>
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.getElementsByClassName('needs-validation');
+          // Loop over them and prevent submission
+          var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+            }, false);
+          });
+        }, false);
+      })();
+      </script>
+    <!--<script>
+    function validate() {
+      var nam = document.getElementById("name");
+      var p = document.getElementById("price");
+      var dol=document.getElementById("dol");
+
+      if (nam == "") {
+          alert("Name is required");
+          return false;
+      }
+      else if (p == "") {
+          alert("Please enter the price");
+          return false;
+      }
+      else if(dol=="")
+          {
+              alert("Please enter the date");
+              return false;
+          }
+      return true;
+        }
+  </script>-->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>
